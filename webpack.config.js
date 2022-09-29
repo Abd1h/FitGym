@@ -1,29 +1,29 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: "development",
+  mode: 'development',
   entry: {
-    bundle: path.resolve(__dirname, "src/JavaScript/index.js"),
+    bundle: path.resolve(__dirname, 'src/JavaScript/index.js'),
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, 'dist'),
     //name = entry{bundle:}
     //[contenthash] for caching so sit load faster - btw this create the issue of multiple js files in the dist
-    filename: "[name][contenthash].js",
+    filename: '[name][contenthash].js',
     // so solve multiple files issue
     clean: true,
     // so svg and imgs have the same file names after imorting
-    assetModuleFilename: "[name][ext]",
+    assetModuleFilename: '[name][ext]',
   },
   // for debug
-  devtool: "source-map",
+  devtool: 'source-map',
 
   //   settings for npm start
   devServer: {
     static: {
       // the same output folder
-      directory: path.resolve(__dirname, "dist"),
+      directory: path.resolve(__dirname, 'dist'),
     },
     port: 3000,
     open: true, //open the browser
@@ -37,22 +37,22 @@ module.exports = {
       {
         // saying any file that ends with .scss use loaders on it
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         // babel settings
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ["@babel/preset-env"],
+            presets: ['@babel/preset-env'],
           },
         },
       },
       {
         test: /\.(png|jpg|svg|jpeg|gif)$/i,
-        type: "asset/resource",
+        type: 'asset/resource',
       },
     ],
   },
@@ -60,11 +60,11 @@ module.exports = {
     // html plugin so its create its own dist folder
     new HtmlWebpackPlugin({
       // tap title - going dynamically to html <%= %>
-      title: "Project",
-      filename: "index.html",
+      title: 'Project',
+      filename: 'index.html',
       // template html file outside dist folder
       //without this fill our html will be cleared everytime we build
-      template: "src/template.html",
+      template: 'src/template.html',
     }),
   ],
 };
