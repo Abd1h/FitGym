@@ -1,0 +1,12 @@
+@use '../utils' as u;
+
+body {
+  color: u.$clr-text-base;
+  background-color: u.$clr-bg-dark;
+}
+
+svg {
+  fill: red;
+  stroke: red;
+  width: 100%;
+}

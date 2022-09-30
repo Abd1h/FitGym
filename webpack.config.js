@@ -25,6 +25,9 @@ module.exports = {
       // the same output folder
       directory: path.resolve(__dirname, 'dist'),
     },
+    //to reload on html files
+    watchFiles: ['src/*.html'],
+    hot: true,
     port: 3000,
     open: true, //open the browser
     hot: true, //reload
@@ -51,7 +54,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpg|svg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
     ],
@@ -60,7 +63,7 @@ module.exports = {
     // html plugin so its create its own dist folder
     new HtmlWebpackPlugin({
       // tap title - going dynamically to html <%= %>
-      title: 'Project',
+      title: 'FitGym',
       filename: 'index.html',
       // template html file outside dist folder
       //without this fill our html will be cleared everytime we build

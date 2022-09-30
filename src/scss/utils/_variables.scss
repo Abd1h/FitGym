@@ -1,0 +1,54 @@
+/* base colors */
+$clr-text-base: #f0f0f0;
+$clr-text-base-bl: #555;
+$clr-text-base-dk: #333;
+
+/* primary colors */
+$clr-primary: #ee0202;
+$clr-primary-lt: #fcccca;
+$clr-primary-dk: #d60202;
+
+/* backgrounds colors */
+$clr-bg-dark: #202124;
+$clr-bg-gray: #303030;
+
+/* font weight */
+$base-bold: 400;
+$Semi-bold: 500;
+$heading-Bold: 700;
+
+/* line height */
+$line-height-: 1;
+
+/* border raduse */
+$border-r: 0.2rem;
+
+$text-max-width: min(80%, 30em);
+
+/* $shadow */
+$shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+$shadow-lt: 0px 0px 13px -6px rgba(0, 0, 0, 0.51);
+/* transitions */
+$base-transition: all 280ms ease;
+/*  font sizes */
+
+$fs-300: 1.4rem;
+$fs-400: 1.6rem;
+$fs-500: 1.8rem;
+$fs-600: 2.2rem;
+$fs-650: 2.8rem;
+$fs-700: 3.1rem;
+$fs-800: 4rem;
+$fs-900: 6rem;
+
+$fs-base: var($fs-400);
+$fs-hero-heading: var($fs-800);
+$fs-heading: var($fs-700);
+$fs-xs-title: var($fs-300);
+$fs-btn: var($fs-600);
+
+$screen-Max-Width: 1440px;
+
+$sections-padding: 1.2rem;
