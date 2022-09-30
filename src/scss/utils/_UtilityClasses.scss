@@ -1,3 +1,4 @@
+@use 'variables' as v;
 .container {
   width: Min(1220px, 100% - 2rem);
   margin-inline: auto;
@@ -5,17 +6,35 @@
 
 .even-columns {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
 }
 
+html {
+  /* 10px / 16px = 0.625 = 62.5% */
+  font-size: 62.5%;
+}
 @media (min-width: 50em) {
   .even-columns {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
   }
+  html {
+    font-size: 100%;
+  }
 }
 
 .section-heading {
+  text-align: center;
 }
-.sub-heading {
+
+.fit-logo {
+  width: 5rem;
+  height: 5rem;
+}
+
+body {
+  background-color: v.$clr-bg-dark;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }

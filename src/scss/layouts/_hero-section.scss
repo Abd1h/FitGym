@@ -1,0 +1,15 @@
+.primary-heading {
+  background: linear-gradient(
+      148deg,
+      rgba(0, 0, 0, 0.89) 27%,
+      rgba(0, 0, 0, 0.3) 76%,
+      rgba(0, 0, 0, 0) 93%
+    ),
+    linear-gradient(
+      10deg,
+      rgba(0, 0, 0, 0.89) 27%,
+      rgba(0, 0, 0, 0.3) 76%,
+      rgba(0, 0, 0, 0) 93%
+    ),
+    url('../assets/hero-backgroundImg.jpg') no-repeat top;
+}
