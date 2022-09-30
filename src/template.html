@@ -5,6 +5,311 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <!-- GOOGLE FONT Oswald -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <div class="primary-heading container">
+      <nav class="nav">
+        <div class="nav__logo fit-logo">
+          <svg><use href="icons.svg#icon-logo"></use></svg>
+        </div>
+        <div class="nav__links">
+          <ul role="list">
+            <li class="links_single-link">
+              <a href="#servieces">SERVIECES</a>
+            </li>
+            <li class="links_single-link"><a href="#schedule">SCHEDULE</a></li>
+            <li class="links_single-link"><a href="#join-us">JOIN US</a></li>
+            <li class="links_single-link"><a href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <header class="header">
+        <div>
+          <ul class="media-icons" role="list">
+            <li class="media-icons_link">
+              <a href="#"
+                ><svg><use href="icons.svg#icon-facebook"></use></svg
+              ></a>
+            </li>
+            <li class="media-icons_link">
+              <a href="#"
+                ><svg><use href="icons.svg#icon-instagram"></use></svg
+              ></a>
+            </li>
+            <li class="media-icons_link">
+              <a href="#"
+                ><svg><use href="icons.svg#icon-youtube"></use></svg
+              ></a>
+            </li>
+            <li class="media-icons_link">
+              <a href="#"
+                ><svg><use href="icons.svg#icon-twitter"></use></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+
+        <h1 class="header__hero-heading">
+          <span>BUILD</span> <br />
+          YOUR BODY AND MIND
+        </h1>
+
+        <div class="header__trial">
+          <h3 class="trial_heading">FREE MONTH TRIAL</h3>
+          <p class="trial_text">
+            Get your gear and start training today!, absolutely for free
+          </p>
+          <button class="trial_btn btn">START NOW</button>
+        </div>
+      </header>
+    </div>
+    <main>
+      <section class="services container even-columns">
+        <h3 class="services__heading | section-heading">SERVICES</h3>
+        <div class="services__single-service">
+          <div class="single-service_img">
+            <img src="build-muscle.jpg" alt="man workingout" />
+          </div>
+          <p class="single-service_heading"><span>BUILD</span> MUSCLE</p>
+        </div>
+        <div class="services__single-service">
+          <div class="single-service_img">
+            <img src="build-muscle.jpg" alt="man workingout" />
+          </div>
+          <p class="single-service_heading"><span>BUILD</span> STRENGTH</p>
+        </div>
+        <div class="services__single-service">
+          <div class="single-service_img">
+            <img src="build-muscle.jpg" alt="man workingout" />
+          </div>
+          <p class="single-service_heading"><span>BUILD</span> SKILLS</p>
+        </div>
+        <div class="services__single-service">
+          <div class="single-service_img">
+            <img src="build-muscle.jpg" alt="man workingout" />
+          </div>
+          <p class="single-service_heading"><span>BUILD</span> HEALTH</p>
+        </div>
+
+        <div class="services__personal-trainers">
+          <h3 class="personal-trainers_heading">PERSONAL TRAINERS</h3>
+          <p class="personal-trainers_text">
+            YOU HAVE THE OPTION TOWORK WITH OUR COACHES <br />
+            AND TAKE THINGS TO THE NEXT LEVEL
+          </p>
+        </div>
+      </section>
+      <!-- ========================================================================== -->
+      <div class="container even-columns">
+        <section class="schedule">
+          <h3 class="schedule__heading | section-heading">SCHEDULE</h3>
+          <div class="schedule__open-time">
+            <p class="open-time_gym">WE ARE OPEN EVERYDAY!</p>
+            <p class="open-time_clock">
+              FORM <em>8 <span>AM</span></em> TO
+              <em>2 <span>AM</span></em>
+            </p>
+
+            <p class="open-time_choaches">WE ARE OPEN EVERYDAY!</p>
+            <p class="open-time_clock">
+              FORM <em>4 <span>PM</span></em> TO
+              <em>10 <span>PM</span></em>
+            </p>
+          </div>
+        </section>
+
+        <section class="quotes">
+          <h3 class="quotes__heading | section-heading">MEMBERS QUOTES</h3>
+          <div class="quotes__quotes-container">
+            <svg class="quotes__quotes-container-icon">
+              <use href="icons.svg#icon-quote"></use>
+            </svg>
+
+            <div class="single-quote">
+              <p class="single-quote__text">
+                “Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
+                ctetur adipisci.ctetur adipisci.ctetu”
+              </p>
+              <div class="single-quote__img">
+                <img src="testimonal-1.jpg" alt="" />
+              </div>
+              <p class="single-quote__member-name">
+                <strong>ali mohammed</strong> <br />
+                professional bodybuilder
+              </p>
+            </div>
+            <div class="single-quote">
+              <p class="single-quote__text">
+                “Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
+                ctetur adipisci.ctetur adipisci.ctetu”
+              </p>
+              <div class="single-quote__img">
+                <img src="testimonal-1.jpg" alt="" />
+              </div>
+              <p class="single-quote__member-name">
+                <strong>ali mohammed</strong> <br />
+                professional bodybuilder
+              </p>
+            </div>
+            <div class="single-quote">
+              <p class="single-quote__text">
+                “Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
+                ctetur adipisci.ctetur adipisci.ctetu”
+              </p>
+              <div class="single-quote__img">
+                <img src="testimonal-1.jpg" alt="" />
+              </div>
+              <p class="single-quote__member-name">
+                <strong>ali mohammed</strong> <br />
+                professional bodybuilder
+              </p>
+            </div>
+            <!-- testimonal squares "dots"-->
+            <div class="quote__dots">
+              <svg class="quote__dots_dot quote__dots_dot--active">
+                <use href="icons.svg#icon-square"></use>
+              </svg>
+              <svg class="quote__dots_dot">
+                <use href="icons.svg#icon-square"></use>
+              </svg>
+              <svg class="quote__dots_dot">
+                <use href="icons.svg#icon-square"></use>
+              </svg>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- ========================================================================== -->
+      <section class="gym-tour container">
+        <h3 class="gym-tour__heading | section-heading">GYM TOUR</h3>
+        <p class="gym-tour__sup-heading">HERE IS A CLOSER LOOK AT THE GYM</p>
+        <div class="gym-tour__img">
+          <img src="gymTourImg.jpg" alt="picture of gym" />
+          <svg class="gym-tour__img_svg">
+            <use href="icons.svg#icon-youtube"></use>
+          </svg>
+        </div>
+      </section>
+      <!-- ========================================================================== -->
+      <section class="subscriptions container">
+        <h3 class="subscriptions__heading | section-heading">SUBSCRIPTIONS</h3>
+        <p class="subscriptions__sub-heading">
+          CUSTOMIZE IT THE WAY YOU LIKE, TO FIT YOUR NEEDS
+        </p>
+        <div class="sub even-columns">
+          <div class="sub__btns">
+            <button class="sub__btns_btn sub__btns_btn--active">MACHINES</button
+            ><button class="sub__btns_btn">CARDIO</button
+            ><button class="sub__btns_btn">SAUNA</button
+            ><button class="sub__btns_btn">BOXING</button>
+          </div>
+
+          <div class="sub__price">
+            <p class="sub__price_text">YOUR MONTHLY SUBSCRIPTION IS</p>
+            <p class="sub__price_num">50 <span>$</span></p>
+          </div>
+        </div>
+        <button class="btn subscriptions__btn">JOIN FIT GYM</button>
+      </section>
+    </main>
+    <!-- ========================================================================== -->
+    <div class="even-columns container">
+      <section class="visis">
+        <h3 class="visit__heading | section-heading">VISIT US</h3>
+        <div class="visit_img-container">
+          <img src="map-img.jpg" alt="image of baghdad map" />
+          <svg class="visit__map-icon">
+            <use href="icons.svg#icon-map-pin"></use>
+          </svg>
+        </div>
+      </section>
+
+      <section class="contact">
+        <h3 class="visit__heading | section-heading">CONTACT</h3>
+        <div class="contact__items">
+          <p class="contact__items_item">
+            <svg><use href="icons.svg#icon-telephone"></use></svg>
+            +9647712******
+          </p>
+          <p class="contact__items_item">
+            <svg><use href="icons.svg#icon-telephone"></use></svg>
+            +9647712******
+          </p>
+          <p class="contact__items_item">
+            <svg><use href="icons.svg#icon-telephone"></use></svg>
+            fitgym@gmail.com
+          </p>
+        </div>
+        <div>
+          <ul class="media-icons" role="list">
+            <li class="media-icons_link">
+              <a href="#"
+                ><svg><use href="icons.svg#icon-facebook"></use></svg
+              ></a>
+            </li>
+            <li class="media-icons_link">
+              <a href="#"
+                ><svg><use href="icons.svg#icon-instagram"></use></svg
+              ></a>
+            </li>
+            <li class="media-icons_link">
+              <a href="#"
+                ><svg><use href="icons.svg#icon-youtube"></use></svg
+              ></a>
+            </li>
+            <li class="media-icons_link">
+              <a href="#"
+                ><svg><use href="icons.svg#icon-twitter"></use></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <!-- ========================================================================== -->
+    <footer class="footer container">
+      <div class="even-columns">
+        <div class="footer-logo fit-logo">
+          <svg><use href="icons.svg#icon-logo"></use></svg>
+        </div>
+
+        <div class="footer__links-contianer">
+          <p class="footer__links-contianer_link">
+            <a href="#servieces">SERVIECES</a>
+          </p>
+          <p class="footer__links-contianer_link">SCHEDULEa href="#schedule">schedule</a>
+          </p>
+          <p class="footer__links-contianer_link">
+            <a href="#join-us">JOIN US</a>
+          </p>
+          <p class="footer__links-contianer_link">
+            <a href="#">APPLY FOR A JOB</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="copyrights">
+        <p>
+          &copy <span class="copyrights-year">2090</span>
+          <a
+            href="https://github.com/Abd1h"
+            target="_blank"
+            class="github-link"
+          >
+            Abdlh
+            <svg><use href="icons.svg#icon-gitHub"></use></svg> </a
+          >, All Rights Reserved
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

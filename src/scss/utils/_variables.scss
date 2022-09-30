@@ -4,9 +4,8 @@ $clr-text-base-bl: #555;
 $clr-text-base-dk: #333;
 
 /* primary colors */
-$clr-primary: #ee0202;
-$clr-primary-lt: #fcccca;
-$clr-primary-dk: #d60202;
+$clr-primary: #66ff00;
+$clr-primary-dk: #48ac06;
 
 /* backgrounds colors */
 $clr-bg-dark: #202124;
@@ -43,12 +42,16 @@ $fs-700: 3.1rem;
 $fs-800: 4rem;
 $fs-900: 6rem;
 
-$fs-base: var($fs-400);
-$fs-hero-heading: var($fs-800);
-$fs-heading: var($fs-700);
-$fs-xs-title: var($fs-300);
-$fs-btn: var($fs-600);
+$fs-base: $fs-400;
+$fs-hero-heading: $fs-800;
+$fs-heading: $fs-700;
+$fs-xs-title: $fs-300;
+$fs-btn: $fs-600;
 
-$screen-Max-Width: 1440px;
-
-$sections-padding: 1.2rem;
+@media (min-width: 50em) {
+  $fs-base: $fs-500;
+  $fs-hero-heading: calc($fs-800 + 1rem);
+  $fs-heading: calc($fs-700 + 0.5rem);
+  $fs-xs-title: $fs-400;
+  $fs-btn: $fs-600;
+}
