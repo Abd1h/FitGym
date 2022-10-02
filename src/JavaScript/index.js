@@ -1,5 +1,7 @@
 // scss
 import './../scss/main.scss';
+//js
+import './mobileNav';
 
 // importing assets folder
 import heroBackGroundImg from '../assets/hero-backgroundImg.jpg';

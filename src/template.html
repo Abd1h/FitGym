@@ -7,74 +7,87 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
 
     <!-- GOOGLE FONT Oswald -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
   </head>
   <body>
+   
     <div class="primary-heading container">
       <nav class="nav">
         <div class="nav__logo fit-logo">
           <svg><use href="icons.svg#icon-logo"></use></svg>
         </div>
-        <div class="nav__links">
+        <div class="nav__links hidden">
           <ul role="list">
-            <li class="links_single-link">
+            <li class="nav__links_link">
               <a href="#servieces">SERVIECES</a>
             </li>
-            <li class="links_single-link"><a href="#schedule">SCHEDULE</a></li>
-            <li class="links_single-link"><a href="#join-us">JOIN US</a></li>
-            <li class="links_single-link"><a href="#contact">CONTACT</a></li>
+            <li class="nav__links_link"><a href="#schedule">SCHEDULE</a></li>
+            <li class="nav__links_link"><a href="#join-us">JOIN US</a></li>
+            <li class="nav__links_link"><a href="#contact">CONTACT</a></li>
           </ul>
-        </div>
-      </nav>
-
-      <header class="header">
-        <div>
-          <ul class="media-icons" role="list">
-            <li class="media-icons_link">
+           <div>
+          <ul class="header__media-icons" role="list">
+            <li class="header__media-icons_link">
               <a href="#"
                 ><svg><use href="icons.svg#icon-facebook"></use></svg
               ></a>
             </li>
-            <li class="media-icons_link">
+            <li class="header__media-icons_link">
               <a href="#"
                 ><svg><use href="icons.svg#icon-instagram"></use></svg
               ></a>
             </li>
-            <li class="media-icons_link">
+            <li class="header__media-icons_link">
               <a href="#"
                 ><svg><use href="icons.svg#icon-youtube"></use></svg
               ></a>
             </li>
-            <li class="media-icons_link">
+            <li class="header__media-icons_link">
               <a href="#"
                 ><svg><use href="icons.svg#icon-twitter"></use></svg
               ></a>
             </li>
           </ul>
         </div>
+      
 
+        </div>
+
+        <div class="nav__btn">
+          <ul class="nav__btn_lines">
+            <li class="line"></li>
+            <li class="line"></li>
+            <li class="line"></li>
+          </ul>
+        </div>
+      </nav>
+
+      <header class="header">
+        
         <h1 class="header__hero-heading">
           <span>BUILD</span> <br />
           YOUR BODY AND MIND
         </h1>
 
         <div class="header__trial">
-          <h3 class="trial_heading">FREE MONTH TRIAL</h3>
-          <p class="trial_text">
-            Get your gear and start training today!, absolutely for free
+          <h3 class="header__trial_heading">FREE MONTH TRIAL</h3>
+          <p class="header__trial_text">
+            Get your gear and start training today!, FOR FREE
           </p>
-          <button class="trial_btn btn">START NOW</button>
+          <button class="header__trial_btn">START NOW</button>
         </div>
+
+       
       </header>
     </div>
+    
     <main>
       <section class="services container">
-        <h3 class="services__heading | section-heading">SERVICES</h3>
+        <h3 class="services__heading ">SERVICES</h3>
         <div class="even-columns">
 
           <div class="services__single-service">
@@ -114,7 +127,7 @@
       <!-- ========================================================================== -->
       <div class="container even-columns">
         <section class="schedule">
-          <h3 class="schedule__heading | section-heading">SCHEDULE</h3>
+          <h3 class="schedule__heading ">SCHEDULE</h3>
           <div class="schedule__open-time">
             <p class="open-time_gym">WE ARE OPEN EVERYDAY!</p>
             <p class="open-time_clock">
@@ -131,7 +144,7 @@
         </section>
 
         <section class="quotes">
-          <h3 class="quotes__heading | section-heading">MEMBERS QUOTES</h3>
+          <h3 class="quotes__heading ">MEMBERS QUOTES</h3>
           <div class="quotes__quotes-container">
             <svg class="quotes__quotes-container-icon">
               <use href="icons.svg#icon-quote"></use>
@@ -193,7 +206,7 @@
       </div>
       <!-- ========================================================================== -->
       <section class="gym-tour container">
-        <h3 class="gym-tour__heading | section-heading">GYM TOUR</h3>
+        <h3 class="gym-tour__heading ">GYM TOUR</h3>
         <p class="gym-tour__sup-heading">HERE IS A CLOSER LOOK AT THE GYM</p>
         <div class="gym-tour__img">
           <img src="gymTourImg.jpg" alt="picture of gym" />
@@ -204,7 +217,7 @@
       </section>
       <!-- ========================================================================== -->
       <section class="subscriptions container">
-        <h3 class="subscriptions__heading | section-heading">SUBSCRIPTIONS</h3>
+        <h3 class="subscriptions__heading ">SUBSCRIPTIONS</h3>
         <p class="subscriptions__sub-heading">
           CUSTOMIZE IT THE WAY YOU LIKE, TO FIT YOUR NEEDS
         </p>
@@ -227,7 +240,7 @@
     <!-- ========================================================================== -->
     <div class="even-columns container">
       <section class="visis">
-        <h3 class="visit__heading | section-heading">VISIT US</h3>
+        <h3 class="visit__heading ">VISIT US</h3>
         <div class="visit_img-container">
           <img src="map-img.jpg" alt="image of baghdad map" />
           <svg class="visit__map-icon">
@@ -237,7 +250,7 @@
       </section>
 
       <section class="contact">
-        <h3 class="visit__heading | section-heading">CONTACT</h3>
+        <h3 class="visit__heading ">CONTACT</h3>
         <div class="contact__items">
           <p class="contact__items_item">
             <svg><use href="icons.svg#icon-telephone"></use></svg>
@@ -314,5 +327,7 @@
         </p>
       </div>
     </footer>
+
+    <div class="overlay-blur hid-blur"></div>
   </body>
 </html>

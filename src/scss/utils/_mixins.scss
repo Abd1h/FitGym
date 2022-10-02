@@ -1,0 +1,30 @@
+@use 'variables' as v;
+
+%btn-style {
+  color: v.$clr-text-base-dk;
+  font-size: v.$fs-btn;
+
+  background-color: v.$clr-primary;
+  border-radius: v.$border-r;
+  font-weight: 800;
+  box-shadow: v.$shadow-lt;
+  display: inline-block;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  padding: 0.2em 0.9em;
+  border: none;
+
+  transition: all 0.2s ease-in;
+}
+
+@mixin heading {
+  text-align: center;
+  font-size: v.$fs-650;
+  font-weight: v.$Semi-bold;
+}
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}

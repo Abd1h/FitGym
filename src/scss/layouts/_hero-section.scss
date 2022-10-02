@@ -1,15 +1,42 @@
+@use '../utils' as u;
+
 .primary-heading {
-  background: linear-gradient(
-      148deg,
-      rgba(0, 0, 0, 0.89) 27%,
-      rgba(0, 0, 0, 0.3) 76%,
-      rgba(0, 0, 0, 0) 93%
-    ),
-    linear-gradient(
-      10deg,
-      rgba(0, 0, 0, 0.89) 27%,
-      rgba(0, 0, 0, 0.3) 76%,
-      rgba(0, 0, 0, 0) 93%
-    ),
-    url('../assets/hero-backgroundImg.jpg') no-repeat top;
+  position: relative;
+  height: 100vh;
+
+  background: url('../assets/hero-backgroundImg.jpg') no-repeat center / cover
+    fixed;
+}
+
+.header {
+  &__hero-heading {
+    font-size: u.$fs-hero-heading;
+    font-weight: u.$heading-bold;
+    margin-block: 45%;
+    line-height: 1.3;
+
+    & span {
+      //BUILD
+      color: u.$clr-primary;
+    }
+  }
+
+  &__trial {
+    text-align: center;
+    &_heading {
+      @include u.heading;
+      color: u.$clr-primary-dk;
+    }
+    &_text {
+      margin-bottom: 3.5rem;
+    }
+    &_btn {
+      @extend %btn-style;
+    }
+  }
+
+  &__media-icons {
+    @include u.flex-center;
+    gap: 2rem;
+  }
 }

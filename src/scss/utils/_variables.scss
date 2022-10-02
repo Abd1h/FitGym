@@ -1,7 +1,7 @@
 /* base colors */
-$clr-text-base: #f0f0f0;
+$clr-text-base: #eae8e8;
 $clr-text-base-bl: #555;
-$clr-text-base-dk: #333;
+$clr-text-base-dk: #000;
 
 /* primary colors */
 $clr-primary: #66ff00;
@@ -14,7 +14,7 @@ $clr-bg-gray: #303030;
 /* font weight */
 $base-bold: 400;
 $Semi-bold: 500;
-$heading-Bold: 700;
+$heading-bold: 600;
 
 /* line height */
 $line-height-: 1;
@@ -46,7 +46,7 @@ $fs-base: $fs-400;
 $fs-hero-heading: $fs-800;
 $fs-heading: $fs-700;
 $fs-xs-title: $fs-300;
-$fs-btn: $fs-600;
+$fs-btn: $fs-500;
 
 @media (min-width: 50em) {
   $fs-base: $fs-500;

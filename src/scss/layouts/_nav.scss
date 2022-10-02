@@ -1,6 +1,51 @@
 @use '../utils' as u;
 
 .nav {
+  overflow-x: hidden;
   display: flex;
   justify-content: space-between;
+
+  padding-top: 1rem;
+  &__logo {
+    // position: fixed;
+  }
+
+  &__links {
+    overflow: hidden;
+    position: absolute;
+    z-index: 999;
+    background-color: u.$clr-bg-dark;
+    top: 0;
+    right: 0;
+    width: 85vw;
+    height: 100vh;
+    transition: u.$base-transition;
+    @include u.flex-center;
+    gap: 18rem;
+    flex-direction: column;
+
+    &_link {
+      font-size: u.$fs-heading;
+      margin-block: 1rem;
+    }
+  }
+  &__btn {
+    padding: 0.5rem;
+    z-index: 9999;
+    &_lines {
+      display: flex;
+      flex-direction: column;
+
+      gap: 0.5rem;
+
+      & li {
+        caret-color: transparent;
+        background: u.$clr-primary-dk;
+        width: 2.3em;
+        height: 0.3em;
+        border-radius: u.$border-r;
+        transition: u.$base-transition;
+      }
+    }
+  }
 }
