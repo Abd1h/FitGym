@@ -1,0 +1,112 @@
+@use '../utils' as u;
+.schedule-qoute {
+  @extend %margin-buttom;
+}
+// schedule section "left side"
+.schedule {
+  &__heading {
+    @include u.heading;
+    text-align: start;
+    margin-bottom: 4rem;
+  }
+
+  &__open-time {
+    &_gym {
+      & span {
+        color: u.$clr-primary-dk;
+      }
+    }
+
+    &_clock {
+      margin-bottom: 4rem;
+      // clock number "8"
+      & span {
+        font-size: u.$fs-heading;
+        color: u.$clr-primary;
+        // clock AM/PM text
+        & span {
+          color: u.$clr-primary-dk;
+          font-size: u.$fs-base;
+          margin-left: -0.61em;
+        }
+      }
+    }
+
+    &_choaches {
+    }
+  }
+}
+
+//members quotes section "right side"
+.quotes {
+  &__heading {
+    @include u.heading;
+    text-align: start;
+    margin-bottom: 4rem;
+  }
+  &__quotes-container {
+    position: relative;
+    background-color: u.$clr-bg-gray;
+
+    &_icon {
+      fill: u.$clr-primary-dk;
+      width: 5rem;
+      height: 5rem;
+      position: absolute;
+      top: 0;
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
+  }
+
+  .single-quote {
+    text-align: center;
+
+    &__text {
+      max-width: u.$text-max-width;
+      line-height: 1.5;
+      margin: 4rem auto 2rem auto;
+    }
+    &__img {
+      text-align: start;
+      display: flex;
+      align-items: center;
+
+      font-size: u.$fs-300;
+      font-weight: u.$base-bold;
+      img {
+        border-radius: 100%;
+        width: 6rem;
+        margin: 1rem;
+      }
+      &_member-name {
+        color: u.$clr-text-base-lt;
+        // name only
+        & strong {
+          color: u.$clr-text-base;
+          font-weight: u.$base-bold;
+        }
+      }
+    }
+  }
+}
+.quote__dots {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  &_dot {
+    cursor: pointer;
+    fill: u.$clr-primary-dk;
+    min-width: 1.8rem;
+    min-height: 1.8rem;
+    &--active {
+      fill: u.$clr-primary;
+    }
+  }
+}
+
+.dots-center {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
