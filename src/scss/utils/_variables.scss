@@ -47,10 +47,12 @@ $fs-hero-heading: $fs-800;
 $fs-heading: $fs-700;
 $fs-xs-title: $fs-300;
 $fs-btn: $fs-500;
+$phone-breakpoint: 50em;
+$tap-breakpoint: 70em;
 
-@media (min-width: 50em) {
+@media (min-width: $phone-breakpoint) {
   $fs-base: $fs-500;
-  $fs-hero-heading: calc($fs-800 + 1rem);
+  $fs-hero-heading: calc($fs-800 + 2rem);
   $fs-heading: calc($fs-700 + 0.5rem);
   $fs-xs-title: $fs-400;
   $fs-btn: $fs-600;

@@ -15,8 +15,8 @@
   </head>
   <body>
    
-    <div class="primary-heading container">
-      <nav class="nav">
+    <div class="primary-heading ">
+      <nav class="nav container">
         <div class="nav__logo fit-logo">
           <svg><use href="icons.svg#icon-logo"></use></svg>
         </div>
@@ -66,17 +66,18 @@
         </div>
       </nav>
 
-      <header class="header">
-        
-        <h1 class="header__hero-heading">
-          <span>BUILD</span> <br />
-          YOUR BODY AND MIND
-        </h1>
+      <header class="header container">
+        <div>
+         <h1 class="header__hero-heading">
+            <span>BUILD</span> <br />
+            YOUR BODY AND MIND
+          </h1>
+        </div>
 
         <div class="header__trial">
           <h3 class="header__trial_heading">FREE MONTH TRIAL</h3>
           <p class="header__trial_text">
-            Get your gear and start training today!, FOR FREE
+            Get your gear and start training today!,<br> FOR FREE
           </p>
           <button class="header__trial_btn">START NOW</button>
         </div>
@@ -86,44 +87,47 @@
     </div>
     
     <main>
+      <div class="rotate-section">
       <section class="services container">
         <h3 class="services__heading ">SERVICES</h3>
-        <div class="even-columns">
+         <p class="services__heading_sup-heading">SOME OF OUR SERVICES</p>
+        <div class="services-grid">
 
-          <div class="services__single-service">
+          <div class="single-service">
             <div class="single-service_img">
               <img src="build-muscle.jpg" alt="man workingout" />
             </div>
-            <p class="single-service_heading"><span>BUILD</span> MUSCLE</p>
+            <p class="single-service_heading"><span>BUILD</span> <br> MUSCLE</p>
           </div>
-          <div class="services__single-service">
+          <div class="single-service">
             <div class="single-service_img">
-              <img src="build-muscle.jpg" alt="man workingout" />
+              <img src="build-strength.jpg" alt="man workingout" />
             </div>
-            <p class="single-service_heading"><span>BUILD</span> STRENGTH</p>
+            <p class="single-service_heading"><span>BUILD</span> <br> STRENGTH</p>
           </div>
-          <div class="services__single-service">
+          <div class="single-service">
             <div class="single-service_img">
-              <img src="build-muscle.jpg" alt="man workingout" />
+              <img src="build-skills.jpg" alt="man workingout" />
             </div>
-            <p class="single-service_heading"><span>BUILD</span> SKILLS</p>
+            <p class="single-service_heading"><span>BUILD</span> <br> SKILLS</p>
           </div>
-          <div class="services__single-service">
+          <div class="single-service">
             <div class="single-service_img">
-              <img src="build-muscle.jpg" alt="man workingout" />
+              <img src="build-health.jpg" alt="man workingout" />
             </div>
-            <p class="single-service_heading"><span>BUILD</span> HEALTH</p>
+            <p class="single-service_heading"><span>BUILD</span> <br> HEALTH</p>
           </div>
+          
         </div>
-
-        <div class="services__personal-trainers">
+        <div class="personal-trainers">
           <h3 class="personal-trainers_heading">PERSONAL TRAINERS</h3>
           <p class="personal-trainers_text">
-            YOU HAVE THE OPTION TOWORK WITH OUR COACHES <br />
-            AND TAKE THINGS TO THE NEXT LEVEL
+            YOU HAVE THE OPTION TO WORK WITH OUR COACHES 
+          <br> AND LEVEL UP!
           </p>
         </div>
       </section>
+      </div>
       <!-- ========================================================================== -->
       <div class="container even-columns">
         <section class="schedule">
@@ -329,5 +333,6 @@
     </footer>
 
     <div class="overlay-blur hid-blur"></div>
+    <div class="black-background"></div>
   </body>
 </html>

@@ -27,7 +27,7 @@ body {
     grid-auto-columns: 1fr;
   }
   html {
-    font-size: 100%;
+    font-size: 90%;
   }
 }
 
@@ -88,4 +88,18 @@ svg {
 }
 .hid-blur {
   display: none;
+}
+
+.black-background {
+  background: linear-gradient(
+    176deg,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(32, 33, 36, 1) 100%
+  );
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 120vh;
+  z-index: -1;
 }

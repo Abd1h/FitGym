@@ -3,17 +3,26 @@
 .primary-heading {
   position: relative;
   height: 100vh;
-
-  background: url('../assets/hero-backgroundImg.jpg') no-repeat center / cover
-    fixed;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 13%,
+      rgba(32, 33, 36, 0) 100%
+    ),
+    url('../assets/hero-backgroundImg.jpg') no-repeat center / cover fixed;
+  // @extend %margin-buttom;
 }
 
 .header {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2rem;
+
   &__hero-heading {
     font-size: u.$fs-hero-heading;
     font-weight: u.$heading-bold;
-    margin-block: 45%;
-    line-height: 1.3;
+    line-height: 1.25;
 
     & span {
       //BUILD
@@ -24,8 +33,7 @@
   &__trial {
     text-align: center;
     &_heading {
-      @include u.heading;
-      color: u.$clr-primary-dk;
+      @include u.grean-sHeading;
     }
     &_text {
       margin-bottom: 3.5rem;

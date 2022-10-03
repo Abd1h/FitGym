@@ -17,9 +17,23 @@
   transition: all 0.2s ease-in;
 }
 
+%margin-buttom {
+  margin-bottom: 6rem;
+}
+%sub-heading {
+  text-align: center;
+  max-width: v.$text-max-width;
+  margin-inline: auto;
+}
 @mixin heading {
   text-align: center;
-  font-size: v.$fs-650;
+  font-size: v.$fs-700;
+  font-weight: v.$Semi-bold;
+}
+@mixin grean-sHeading {
+  text-align: center;
+  font-size: v.$fs-600;
+  color: v.$clr-primary-dk;
   font-weight: v.$Semi-bold;
 }
 @mixin flex-center {
@@ -27,4 +41,15 @@
   align-items: center;
   text-align: center;
   justify-content: center;
+}
+
+@mixin rotate-section {
+  padding-block: 5rem;
+  margin-top: -2rem;
+  margin-bottom: 6rem;
+
+  transform: skewY(-6deg);
+  & > * {
+    transform: skewY(6deg);
+  }
 }
