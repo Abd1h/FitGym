@@ -2,6 +2,7 @@
 import './../scss/main.scss';
 //js
 import './mobileNav';
+import './testimonals';
 
 // importing assets folder
 import heroBackGroundImg from '../assets/hero-backgroundImg.jpg';
