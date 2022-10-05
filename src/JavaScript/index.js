@@ -19,4 +19,5 @@ import memberFace3 from '../assets/members-quotes-imgs/tes.png';
 
 import tourBackground from '../assets/tour-imgs/gymTour-background.jpg';
 import tourimg from '../assets/tour-imgs/gymTourImg.jpg';
+import tourBackgroundImg from '../assets/tour-imgs/gymTour-background.jpg';
 import svgs from '../assets/icons.svg';

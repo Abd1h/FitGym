@@ -1,0 +1,35 @@
+@use '../utils' as u;
+.gym-tour {
+  @include u.flex-center;
+  flex-direction: column;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.4) 35%,
+      rgba(32, 33, 36, 0.3) 100%
+    ),
+    url('../assets/tour-imgs/gymTour-background.jpg') no-repeat center / cover;
+
+  &__heading {
+    @include u.heading;
+  }
+  &__sup-heading {
+    @extend %sub-heading;
+  }
+  &__img {
+    position: relative;
+    width: 90%;
+    padding-block: 3rem;
+    @media (min-width: u.$phone-breakpoint) {
+      width: 55%;
+    }
+  }
+  &__img_svg {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 6rem;
+    height: 6rem;
+  }
+}

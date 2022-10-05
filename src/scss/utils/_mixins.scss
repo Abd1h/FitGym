@@ -26,11 +26,12 @@
   margin-inline: auto;
 }
 @mixin heading {
+  padding-top: 1rem;
   text-align: center;
   font-size: v.$fs-700;
   font-weight: v.$Semi-bold;
 }
-@mixin grean-sHeading {
+@mixin green-sHeading {
   text-align: center;
   font-size: v.$fs-600;
   color: v.$clr-primary-dk;

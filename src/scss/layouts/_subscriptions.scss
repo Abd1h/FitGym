@@ -1,0 +1,66 @@
+@use '../utils' as u;
+
+.subscriptions {
+  &__heading {
+    @include u.heading;
+  }
+  &__sub-heading {
+    @extend %sub-heading;
+  }
+  &__btn {
+    @extend %btn-style;
+    text-align: center;
+  }
+}
+
+.sub {
+  padding-block: 4rem;
+  @media (max-width: u.$phone-breakpoint) {
+    grid-template-rows: 1fr 1fr;
+  }
+
+  &__btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.4rem;
+    &_btn {
+      @extend %btn-style;
+      &--active {
+      }
+    }
+  }
+  &__price {
+    height: 100%;
+    padding-inline: 1rem;
+    @media (min-width: u.$phone-breakpoint) {
+      width: 100%;
+    }
+    border-radius: u.$border-r;
+    font-weight: 700;
+    background: linear-gradient(
+      90deg,
+      rgba(102, 255, 0, 0.9) 25%,
+      rgba(32, 33, 36, 0) 85%
+    );
+
+    align-self: center;
+    justify-self: center;
+    @include u.flex-center;
+    gap: 1rem;
+    text-align: start;
+    &_text {
+      color: u.$clr-text-base-dk;
+      font-size: u.$fs-600;
+    }
+    &_num {
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+      color: u.$clr-primary;
+      font-size: u.$fs-hero-heading;
+      & span {
+        font-size: u.$fs-600;
+      }
+    }
+  }
+}
