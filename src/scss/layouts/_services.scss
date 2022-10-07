@@ -59,6 +59,7 @@
 @media (min-width: 40em) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 0;
     & > * {
       justify-self: center;
       max-width: Min(20rem, 100%);

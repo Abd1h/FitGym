@@ -13,6 +13,7 @@
   }
   &__btn {
     @extend %btn-style;
+    margin-top: -2rem;
   }
   & span {
     color: u.$clr-primary-dk;
