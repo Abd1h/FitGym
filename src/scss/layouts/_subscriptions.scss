@@ -1,6 +1,10 @@
 @use '../utils' as u;
 
 .subscriptions {
+  @extend %margin-buttom;
+  @include u.flex-center;
+  flex-direction: column;
+
   &__heading {
     @include u.heading;
   }
@@ -9,14 +13,18 @@
   }
   &__btn {
     @extend %btn-style;
-    text-align: center;
+  }
+  & span {
+    color: u.$clr-primary-dk;
   }
 }
 
 .sub {
-  padding-block: 4rem;
+  gap: 8rem;
+  padding-block: 6rem;
   @media (max-width: u.$phone-breakpoint) {
     grid-template-rows: 1fr 1fr;
+    gap: 4rem;
   }
 
   &__btns {
@@ -25,7 +33,9 @@
     gap: 2.4rem;
     &_btn {
       @extend %btn-style;
+      background-color: u.$clr-primary-dk2;
       &--active {
+        background-color: u.$clr-primary;
       }
     }
   }
@@ -39,25 +49,24 @@
     font-weight: 700;
     background: linear-gradient(
       90deg,
-      rgba(102, 255, 0, 0.9) 25%,
-      rgba(32, 33, 36, 0) 85%
+      rgba(48, 48, 48, 1) 52%,
+      rgba(0, 0, 0, 0) 85%
     );
 
     align-self: center;
     justify-self: center;
     @include u.flex-center;
-    gap: 1rem;
+    gap: 2rem;
     text-align: start;
     &_text {
-      color: u.$clr-text-base-dk;
       font-size: u.$fs-600;
     }
     &_num {
       display: flex;
       align-items: center;
       gap: 0.2rem;
-      color: u.$clr-primary;
       font-size: u.$fs-hero-heading;
+
       & span {
         font-size: u.$fs-600;
       }

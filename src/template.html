@@ -245,28 +245,31 @@
         <p class="gym-tour__sub-heading">HERE IS A CLOSER LOOK AT THE GYM</p>
         <div class="gym-tour__img">
           <img src="gymTourImg.jpg" alt="picture of gym" />
-          <svg class="gym-tour__img_svg">
-            <use href="icons.svg#icon-youtube"></use>
-          </svg>
+          <a href="#">
+
+            <svg class="gym-tour__img_svg">
+              <use href="icons.svg#icon-youtube"></use>
+            </svg>
+          </a>
         </div>
       </section>
       <!-- ========================================================================== -->
       <section class="subscriptions container">
         <h3 class="subscriptions__heading ">SUBSCRIPTIONS</h3>
         <p class="subscriptions__sub-heading">
-          CUSTOMIZE IT THE WAY YOU LIKE, TO FIT YOUR NEEDS
+         <span>CUSTOMIZE</span> IT THE WAY YOU LIKE, TO <span>FIT</span> YOUR NEEDS
         </p>
         <div class="sub even-columns">
           <div class="sub__btns">
-            <button class="sub__btns_btn sub__btns_btn--active">MACHINES</button
-            ><button class="sub__btns_btn">CARDIO</button
-            ><button class="sub__btns_btn">SAUNA</button
-            ><button class="sub__btns_btn">BOXING</button>
+            <button data-price="29" class="sub__btns_btn sub__btns_btn--active">BASIC</button
+            ><button data-price="10" class="sub__btns_btn">+CARDIO</button
+            ><button data-price="10" class="sub__btns_btn">+SAUNA</button
+            ><button data-price="20" class="sub__btns_btn sub__btns_btn--active">+BOXING</button>
           </div>
 
           <div class="sub__price">
             <p class="sub__price_text">YOUR MONTHLY <br> SUBSCRIPTION IS</p>
-            <p class="sub__price_num">50 <span>$</span></p>
+            <p class="sub__price_num">29 <span>$</span></p>
           </div>
         </div>
         <button class="subscriptions__btn">JOIN FIT GYM</button>
