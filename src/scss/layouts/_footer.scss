@@ -1,0 +1,33 @@
+@use '../utils' as u;
+.footer {
+  margin-top: 8rem;
+  &__logo {
+    justify-self: center;
+    align-self: center;
+  }
+  &__links-contianer {
+    @media (min-width: u.$phone-breakpoint) {
+      justify-self: start;
+    }
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 2rem;
+    &_link {
+      align-self: center;
+      justify-self: center;
+      &:last-child {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+}
+
+.copyrights {
+  margin-top: 4rem;
+  text-align: center;
+  & svg {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
