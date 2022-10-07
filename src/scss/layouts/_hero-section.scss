@@ -45,6 +45,7 @@
 
   &__media-icons {
     @include u.flex-center;
+    fill: u.$clr-text-base;
     gap: 2rem;
   }
 }

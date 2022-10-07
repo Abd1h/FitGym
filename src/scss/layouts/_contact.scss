@@ -1,14 +1,46 @@
 @use '../utils' as u;
 
+.visit {
+  @extend %margin-buttom;
+
+  &__heading {
+    @include u.heading;
+    text-align: start;
+    margin-bottom: 4rem;
+  }
+  &__img-container {
+    & img {
+    }
+  }
+  &__map-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+}
 .contact {
-  &__ {
+  @extend %margin-buttom;
+
+  &__heading {
+    @include u.heading;
+    text-align: start;
+    margin-bottom: 4rem;
   }
-  &__ {
+  &__items {
+    &_item {
+    }
   }
-  &__ {
+  & span {
+    color: u.$clr-primary-dk;
   }
-  &_ {
-  }
-  &_ {
+}
+.media-icons {
+  display: flex;
+  gap: 1.5rem;
+  &_link {
+    & svg {
+      fill: u.$clr-text-base;
+      width: 3rem;
+      height: 3rem;
+    }
   }
 }
