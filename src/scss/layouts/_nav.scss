@@ -1,50 +1,78 @@
 @use '../utils' as u;
 
 .nav {
-  overflow-x: hidden;
+  position: relative;
   display: flex;
   justify-content: space-between;
-
   padding-top: 1.4rem;
-  &__logo {
-    // position: fixed;
-  }
 
+  // for nav only "pc first"
   &__links {
-    overflow: hidden;
-    position: absolute;
-    z-index: 999;
-    background-color: u.$clr-bg-dark;
-    top: 0;
-    right: 0;
-    width: 85vw;
-    height: 100vh;
     transition: u.$base-transition;
     @include u.flex-center;
-    gap: 18rem;
-    flex-direction: column;
-
+    @media (min-width: u.$phone-breakpoint) {
+      & ul {
+        display: flex;
+        gap: 4rem;
+      }
+    }
     &_link {
-      font-size: u.$fs-heading;
-      margin-block: 1rem;
+      transition: u.$base-transition;
+    }
+    &_link:hover,
+    &_link:active {
+      color: u.$clr-primary;
+      transform: translateY(-2px);
     }
   }
   &__btn {
-    padding: 0.5rem;
-    z-index: 9999;
-    &_lines {
-      display: flex;
+    display: none;
+  }
+  // mobile style
+  @media (max-width: u.$phone-breakpoint) {
+    &__links {
+      overflow-x: hidden;
+      position: absolute;
+      z-index: 999;
+      background-color: u.$clr-bg-dark;
+      top: 0;
+      right: 0;
+      width: 85vw;
+      height: 100vh;
+
+      gap: 18rem;
       flex-direction: column;
 
-      gap: 0.5rem;
+      &_link {
+        font-size: u.$fs-heading;
+        margin-block: 1rem;
+      }
+      &-hidden {
+        visibility: hidden;
+        transform: translateX(100%);
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+    //  burger btn
+    &__btn {
+      display: inline-block;
+      cursor: pointer;
+      padding: 0.5rem;
+      z-index: 9999;
+      &_lines {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
 
-      & li {
-        caret-color: transparent;
-        background: u.$clr-primary-dk;
-        width: 2.3em;
-        height: 0.3em;
-        border-radius: u.$border-r;
-        transition: u.$base-transition;
+        & li {
+          caret-color: transparent;
+          background: u.$clr-primary-dk;
+          width: 2.3em;
+          height: 0.3em;
+          border-radius: u.$border-r;
+          transition: u.$base-transition;
+        }
       }
     }
   }

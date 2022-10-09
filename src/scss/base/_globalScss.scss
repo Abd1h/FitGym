@@ -11,7 +11,9 @@
 
   gap: 2rem;
 }
-
+.even-columns > * {
+  justify-self: center;
+}
 html {
   /* 10px / 16px = 0.625 = 62.5% */
   font-size: 62.5%;
@@ -53,18 +55,13 @@ body {
 }
 
 svg {
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 2rem;
+  height: 2rem;
   fill: v.$clr-text-base;
 }
 
 /* ||JS|| classes for nav mobile */
-.hidden {
-  visibility: hidden;
-  transform: translateX(100%);
-  opacity: 0;
-  pointer-events: none;
-}
+
 .set-overflow {
   overflow: hidden;
 }

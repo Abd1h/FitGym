@@ -2,14 +2,13 @@
 
 .primary-heading {
   position: relative;
-  height: 100vh;
+  height: 102vh;
   background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 1) 13%,
       rgba(32, 33, 36, 0) 100%
     ),
     url('../assets/hero-backgroundImg.jpg') no-repeat center / cover fixed;
-  // @extend %margin-buttom;
 }
 
 .header {
@@ -17,12 +16,17 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   gap: 2rem;
 
   &__hero-heading {
     font-size: u.$fs-hero-heading;
     font-weight: u.$heading-bold;
     line-height: 1.25;
+    @media (min-width: u.$phone-breakpoint) {
+      font-size: calc(u.$fs-hero-heading + 0.3rem);
+      margin-left: -10rem;
+    }
 
     & span {
       //BUILD
@@ -46,5 +50,29 @@
   &__media-icons {
     @include u.flex-center;
     gap: 2rem;
+    &_link {
+      & svg {
+        transition: u.$base-transition;
+        &:hover,
+        &:active {
+          fill: u.$clr-primary;
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+  @media (min-width: u.$phone-breakpoint) {
+    &__media-icons {
+      gap: 4rem;
+      flex-direction: column;
+      // relatve to the nav
+      position: absolute;
+      top: 300%;
+      left: 2rem;
+      & svg {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
   }
 }

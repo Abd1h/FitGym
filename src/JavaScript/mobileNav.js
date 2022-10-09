@@ -6,12 +6,12 @@ const navLinks = document.querySelectorAll('.nav__links_link');
 
 const overlay = document.querySelector('.overlay-blur');
 
-// "hidden" class that hids burgerMenu
+// "nav__links-hidden" class that hids burgerMenu
 // "line-1 ,line-2,line-3" classes that manipulate burgerBtn shape
 
 const toggleBurgerMenu = function () {
   // 1) slide the menu to the view
-  burgerMenu.classList.toggle('hidden');
+  burgerMenu.classList.toggle('nav__links-hidden');
   // 2) change burger btn style (hidden/close)
   btnLines.forEach((line, i) => {
     line.classList.toggle(`line-${i + 1}`);
@@ -36,7 +36,7 @@ overlay.addEventListener('click', function () {
 navLinks.forEach((link) =>
   link.addEventListener('click', function () {
     // if its on mobile and window is open
-    if (burgerMenu.classList.contains('hidden')) return;
+    if (burgerMenu.classList.contains('nav__links-hidden')) return;
     toggleBurgerMenu();
   })
 );

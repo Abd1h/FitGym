@@ -16,9 +16,6 @@
   }
 }
 .single-service {
-  &_img {
-    // width: Min(28rem, 100%);
-  }
   &_heading {
     font-size: u.$fs-650;
     font-weight: u.$Semi-bold;
@@ -28,6 +25,13 @@
       //BUILD
       font-size: u.$fs-600;
       color: u.$clr-primary;
+    }
+  }
+  &_img {
+    transition: u.$base-transition;
+    &:hover,
+    &:active {
+      transform: translateY(-2.5px);
     }
   }
 }

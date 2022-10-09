@@ -1,6 +1,7 @@
 // scss
 import './../scss/main.scss';
 //js
+import './genarel';
 import './mobileNav';
 import './testimonals';
 
