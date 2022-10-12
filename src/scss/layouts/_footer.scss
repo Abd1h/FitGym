@@ -4,6 +4,7 @@
   &__logo {
     justify-self: center;
     align-self: center;
+    z-index: 22;
   }
   &__links-contianer {
     @media (min-width: u.$phone-breakpoint) {
