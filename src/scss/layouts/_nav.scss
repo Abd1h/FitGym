@@ -19,8 +19,7 @@
     &_link {
       transition: u.$base-transition;
     }
-    &_link:hover,
-    &_link:active {
+    &_link:hover {
       color: u.$clr-primary;
       transform: translateY(-2px);
     }

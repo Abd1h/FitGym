@@ -15,8 +15,7 @@
 
   transition: v.$base-transition;
 
-  &:hover,
-  &:active {
+  &:hover {
     background-color: v.$clr-primary-dk;
     transform: translateY(-1.5px);
   }

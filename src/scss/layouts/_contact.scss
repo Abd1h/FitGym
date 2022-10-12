@@ -27,8 +27,7 @@
       height: 4rem;
       fill: u.$clr-primary-dk;
     }
-    &:hover svg,
-    &:active svg {
+    &:hover svg {
       fill: u.$clr-primary;
       transform: translateY(-2px);
     }
