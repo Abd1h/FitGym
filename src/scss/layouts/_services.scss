@@ -34,6 +34,25 @@
       transform: translateY(-2.5px);
     }
   }
+  transition: u.$base-transition;
+  @media (min-width: u.$tap-breakpoint) {
+    // animation delay
+    &:nth-child(2) {
+      transition-delay: 50ms;
+    }
+    &:nth-child(3) {
+      transition-delay: 100ms;
+    }
+    &:nth-child(4) {
+      transition-delay: 150ms;
+    }
+  }
+  @media (max-width: u.$phone-breakpoint) {
+    //disable animation on phones
+    transform: translateY(0%) !important;
+    filter: blur(0px) !important;
+    opacity: 1 !important;
+  }
 }
 .personal-trainers {
   text-align: center;

@@ -4,6 +4,7 @@ import './../scss/main.scss';
 import './genarel';
 import './mobileNav';
 import './testimonals';
+import './subscriptions';
 
 // importing assets folder
 import heroBackGroundImg from '../assets/hero-backgroundImg.jpg';

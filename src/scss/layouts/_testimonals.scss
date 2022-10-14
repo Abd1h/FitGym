@@ -41,6 +41,7 @@
 //members quotes section "right side"
 .quotes {
   transition: u.$base-transition;
+
   max-width: Min(100%, 38rem);
   &__heading {
     @include u.heading;

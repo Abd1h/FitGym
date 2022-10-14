@@ -22,8 +22,6 @@ logoLink.addEventListener('click', function () {
 //===================================================
 // *******aplaying soomth section reveal while scrolling *******
 const allSections = document.querySelectorAll('.smooth-reveal');
-// const allFeatures = document.querySelectorAll('.feature-info');
-
 // "hid-section" class to preper section for reveling
 
 // 1) first hidding the selected sections
@@ -31,83 +29,27 @@ allSections.forEach((section) => section.classList.add('hid-section'));
 // allFeatures.forEach((feature) => feature.classList.add('hid-features-info'));
 // 2) reveal sections
 const obsCallbackRevealSection = function (entries, observer) {
-  const entry = entries[0];
+  entries.forEach((entry) => {
+    //checking if sections is intersecting
+    if (!entry.isIntersecting) return;
 
-  //checking if sections is intersecting
-  if (!entry.isIntersecting) return;
-  //checking if target is from features section "reveal form left side"
-  if (entry.target.classList.contains('feature-info')) {
-    entry.target.classList.remove('hid-features-info');
-  }
-  //reveal section "from bottom"
-  entry.target.classList.remove('hid-section');
+    //reveal section "from bottom"
+    entry.target.classList.remove('hid-section');
 
-  //  thats it.. finish obsorving
-  observer.unobserve(entry.target);
+    //  thats it.. finish obsorving
+    observer.unobserve(entry.target);
+  });
 };
 
 const obsOptions = {
   root: null,
-  threshold: 0,
+  threshold: 0.15,
 };
 
 const observer = new IntersectionObserver(obsCallbackRevealSection, obsOptions);
 allSections.forEach((section) => observer.observe(section));
-// allFeatures.forEach((feature) => observer.observe(feature));
 
-// //================================================================
-// // *******aplaying Lazy loading for featurs section images *******
-
-// // import pictur from '../images/featurse' cuz parcel has no way of knowing the url for data-src after building;
-
-// import featureImg2 from 'url:../images/featurse/greyson-joralemon-A1g0oeX29ec-unsplash (1).jpg';
-// import featureImg3 from 'url:../images/featurse/marissa-daeger-jCctpZe3sZo-unsplash (1).jpg';
-// import featureImg1 from 'url:../images/featurse/pexels-yura-forrat-8642037 (2).jpg';
-// //
-// const highImages = [featureImg1, featureImg2, featureImg3];
-// const images = document.querySelectorAll('.img-lazy');
-// images.forEach((img, i) => {
-//   //1)adding blur effect
-//   img.classList.add('lazy-blur');
-//   //2) setting the data-src with the high images url
-//   img.dataset.src = highImages[i];
-// });
-
-// const obsCallbackLoadImage = function (entries, observer) {
-//   const entry = entries[0];
-
-//   if (!entry.isIntersecting) return;
-//   // 1) replace images
-
-//   entry.target.src = entry.target.dataset.src;
-//   // 2) remove the blur filter after the new image is loaded
-//   entry.target.addEventListener('load', function () {
-//     entry.target.classList.remove('lazy-blur');
-//   });
-//   //that it.. unobserve
-//   observer.unobserve(entry.target);
-// };
-
-// const obsOptionsLoadImage = {
-//   root: null,
-//   threshold: 0.2,
-//   rootMargin: '200px', //run call back 200px before intersecting
-// };
-
-// const LazyImagesObserver = new IntersectionObserver(
-//   obsCallbackLoadImage,
-//   obsOptionsLoadImage
-// );
-// images.forEach((img) => LazyImagesObserver.observe(img));
-
-// //===================================================
-// // *******getting copyrights year for footer *******
-// const copyRightsYear = document.querySelector('.copyrights-year');
-// const date = new Date();
-// const year = String(date.getFullYear());
-
-// copyRightsYear.textContent = year;
-
+//===================================================
 // // *******action for btns *******
 // const btns = document.querySelectorAll('.btn');
 // const links = document.querySelectorAll('[href="#"]');
@@ -130,3 +72,11 @@ allSections.forEach((section) => observer.observe(section));
 // messageExitBtn.addEventListener('click', function () {
 //   messageContainer.classList.remove('open');
 // });
+
+//===================================================
+// *******getting copyrights year for footer *******
+const copyRightsYear = document.querySelector('.copyrights-year');
+const date = new Date();
+const year = String(date.getFullYear());
+
+copyRightsYear.textContent = year;
