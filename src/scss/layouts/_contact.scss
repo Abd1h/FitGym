@@ -5,13 +5,14 @@
 
   &__heading {
     @include u.heading;
-    margin-left: -6rem;
-    margin-bottom: 3.3rem;
+    // text-align: start;
+    margin-bottom: 4.1rem;
   }
   &__img-container {
     position: relative;
-    width: Min(70%, 40rem);
+    width: 90%;
     margin-inline: auto;
+
     & img {
       filter: brightness(0.85);
     }
@@ -23,8 +24,8 @@
     @include u.flex-center;
     & svg {
       transition: u.$base-transition;
-      width: 4rem;
-      height: 4rem;
+      width: 5rem;
+      height: 5rem;
       fill: u.$clr-primary-dk;
     }
     &:hover svg {
@@ -41,28 +42,34 @@
     margin-bottom: 4.1rem;
   }
   &__items {
+    font-size: u.$fs-600;
+    height: 60%;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: 1rem;
+
     &_item {
       text-transform: uppercase;
       display: flex;
-      gap: 0.5rem;
+      align-items: center;
+      gap: 0.8rem;
       & svg {
         fill: u.$clr-primary-dk;
       }
     }
   }
 }
+
 .media-icons {
   margin-top: 3rem;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   &_link {
     & svg {
       transition: u.$base-transition;
-      width: 3rem;
-      height: 3rem;
+      width: 2.88rem;
+      height: 2.88rem;
     }
     &:hover,
     &:active {
