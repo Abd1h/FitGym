@@ -4,6 +4,7 @@
 }
 // schedule section "left side"
 .schedule {
+  transition: u.$base-transition;
   &__heading {
     @include u.heading;
     text-align: start;
@@ -39,6 +40,7 @@
 
 //members quotes section "right side"
 .quotes {
+  transition: u.$base-transition;
   max-width: Min(100%, 38rem);
   &__heading {
     @include u.heading;

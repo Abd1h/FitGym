@@ -102,3 +102,9 @@ svg {
   height: 120vh;
   z-index: -1;
 }
+
+.hid-section {
+  transform: translateY(50%);
+  filter: blur(5px);
+  opacity: 0;
+}
