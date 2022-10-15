@@ -1,10 +1,56 @@
-@use '../utils' as v;
+@use '../utils' as u;
+
+/* ------------------------------------------- 
+               global styling
+-------------------------------------------  */
 
 body {
-  color: v.$clr-text-base;
+  // typography
+  color: u.$clr-text-base;
   font-family: 'Inter', sans-serif;
-  font-size: v.$fs-base;
+  font-size: u.$fs-base;
+  font-weight: u.$base-bold;
+  letter-spacing: 0.6px;
+  line-height: 1.4;
+  text-rendering: optimizeSpeed;
+
+  // body style
+  background-color: u.$clr-bg-dark;
+  min-height: 100vh;
 }
+
+html {
+  /* 10px / 16px = 0.625 = 62.5% */
+  font-size: 62.5%;
+
+  @media (min-width: 50em) {
+    font-size: 70%;
+  }
+}
+
+html,
+body {
+  // for overflow
+  height: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+svg {
+  width: 2rem;
+  height: 2rem;
+  fill: u.$clr-text-base;
+}
+
+.fit-logo svg {
+  width: 5rem;
+  height: 5rem;
+  fill: u.$clr-primary-dk;
+}
+
+/* ------------------------------------------- 
+               global classes
+-------------------------------------------  */
 
 .container {
   width: Min(1220px, 100%);
@@ -14,21 +60,10 @@ body {
 
 .even-columns {
   display: grid;
-
   gap: 2rem;
 }
 .even-columns > * {
   justify-self: center;
-}
-html {
-  /* 10px / 16px = 0.625 = 62.5% */
-  font-size: 62.5%;
-}
-html,
-body {
-  height: 100%;
-  overflow-x: hidden;
-  position: relative;
 }
 
 @media (min-width: 50em) {
@@ -36,39 +71,27 @@ body {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
   }
-  html {
-    font-size: 70%;
-  }
 }
 
-.section-heading {
-  text-align: center;
+.black-background {
+  // for the rotated section
+  background: linear-gradient(
+    176deg,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(32, 33, 36, 1) 100%
+  );
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 120vh;
+  z-index: -1;
 }
-
-.fit-logo svg {
-  width: 5rem;
-  height: 5rem;
-  fill: v.$clr-primary-dk;
-}
-
-body {
-  background-color: v.$clr-bg-dark;
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.4;
-  letter-spacing: 0.6px;
-  font-weight: v.$base-bold;
-}
-
-svg {
-  width: 2rem;
-  height: 2rem;
-  fill: v.$clr-text-base;
-}
-
-/* ||JS|| classes for nav mobile */
-
+/* ------------------------------------------- 
+    ||JS|| classes that are manipulated by js
+-------------------------------------------  */
 .set-overflow {
+  // to prevant scrolling when menu nav is open
   overflow: hidden;
 }
 /* button lines */
@@ -95,20 +118,7 @@ svg {
   display: none;
 }
 
-.black-background {
-  background: linear-gradient(
-    176deg,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(32, 33, 36, 1) 100%
-  );
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100vw;
-  height: 120vh;
-  z-index: -1;
-}
-
+// for sections with smooth reveal
 .hid-section {
   transform: translateY(50%);
   filter: blur(5px);
@@ -122,13 +132,13 @@ svg {
   position: fixed;
   bottom: 4rem;
   left: 1rem;
-  background: v.$clr-bg-dark;
-  border: v.$border-r;
-  width: Min(90%, 40em);
+  background: u.$clr-bg-dark;
+  border: u.$border-r;
+  width: Min(95%, 40em);
   height: Min(10vh, 8rem);
   z-index: 9999;
 
-  transition: v.$base-transition;
+  transition: u.$base-transition;
   display: grid;
   align-items: center;
   grid-template-columns: 1.5fr 6fr 1fr;
@@ -143,7 +153,7 @@ svg {
     filter: blur(5px);
   }
   &__btn {
-    fill: v.$clr-primary-dk !important;
+    fill: u.$clr-primary-dk !important;
     width: 3.2rem !important;
     height: 3.2rem !important;
     cursor: pointer;
@@ -152,13 +162,13 @@ svg {
     justify-self: center;
     width: 5rem;
     height: 5rem;
-    fill: v.$clr-primary-dk;
+    fill: u.$clr-primary-dk;
   }
   & p {
     display: inline;
     text-transform: capitalize;
     &:last-child {
-      font-size: v.$fs-300;
+      font-size: u.$fs-300;
     }
   }
 }
