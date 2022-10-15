@@ -50,28 +50,29 @@ const observer = new IntersectionObserver(obsCallbackRevealSection, obsOptions);
 allSections.forEach((section) => observer.observe(section));
 
 //===================================================
-// // *******action for btns *******
-// const btns = document.querySelectorAll('.btn');
-// const links = document.querySelectorAll('[href="#"]');
-// const messageExitBtn = document.querySelector('.message-btn');
-// const messageContainer = document.querySelector('.message-container');
-// const targetedBtns = [...btns, ...links];
+// *******action for btns *******
+const btns = document.querySelectorAll('.demo-btn');
+const links = document.querySelectorAll('[href="#"]');
+const messageContainer = document.querySelector('.message-container');
+const messageExitBtn = document.querySelector('.message-container__btn');
+const targetedBtns = [...btns, ...links];
 
-// targetedBtns.forEach((btn) =>
-//   btn.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     console.log('click');
-//     messageContainer.classList.add('open');
-//     setTimeout(() => {
-//       if (messageContainer.classList.contains('open'))
-//         messageContainer.classList.remove('open');
-//     }, 5000);
-//   })
-// );
+targetedBtns.forEach((btn) =>
+  btn.addEventListener('click', function (e) {
+    e.preventDefault();
 
-// messageExitBtn.addEventListener('click', function () {
-//   messageContainer.classList.remove('open');
-// });
+    messageContainer.classList.remove('message-container--hid');
+    setTimeout(() => {
+      if (!messageContainer.classList.contains('message-container--hid'))
+        messageContainer.classList.add('message-container--hid');
+    }, 5000);
+  })
+);
+
+messageExitBtn.addEventListener('click', function () {
+  console.log('click');
+  messageContainer.classList.add('message-container--hid');
+});
 
 //===================================================
 // *******getting copyrights year for footer *******

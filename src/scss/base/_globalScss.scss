@@ -1,5 +1,11 @@
 @use '../utils' as v;
 
+body {
+  color: v.$clr-text-base;
+  font-family: 'Inter', sans-serif;
+  font-size: v.$fs-base;
+}
+
 .container {
   width: Min(1220px, 100%);
   padding-inline: 2rem;
@@ -107,4 +113,52 @@ svg {
   transform: translateY(50%);
   filter: blur(5px);
   opacity: 0;
+}
+
+/* ------------------------------------------- 
+            popup error message 
+-------------------------------------------  */
+.message-container {
+  position: fixed;
+  bottom: 4rem;
+  left: 1rem;
+  background: v.$clr-bg-dark;
+  border: v.$border-r;
+  width: Min(90%, 40em);
+  height: Min(10vh, 8rem);
+  z-index: 9999;
+
+  transition: v.$base-transition;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1.5fr 6fr 1fr;
+  gap: 0.5rem;
+
+  /* hid */
+  &--hid {
+    visibility: hidden;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    filter: blur(5px);
+  }
+  &__btn {
+    fill: v.$clr-primary-dk !important;
+    width: 3.2rem !important;
+    height: 3.2rem !important;
+    cursor: pointer;
+  }
+  & svg {
+    justify-self: center;
+    width: 5rem;
+    height: 5rem;
+    fill: v.$clr-primary-dk;
+  }
+  & p {
+    display: inline;
+    text-transform: capitalize;
+    &:last-child {
+      font-size: v.$fs-300;
+    }
+  }
 }
